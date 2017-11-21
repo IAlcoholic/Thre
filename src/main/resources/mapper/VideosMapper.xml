@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.yll.thre.dao.VideosMapper">
+  <resultMap id="BaseResultMap" type="me.yll.thre.model.Videos">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="videoname" jdbcType="VARCHAR" property="videoname" />
+    <result column="videodescription" jdbcType="VARCHAR" property="videodescription" />
+    <result column="videokeyword" jdbcType="VARCHAR" property="videokeyword" />
+    <result column="videourl" jdbcType="VARCHAR" property="videourl" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="download" jdbcType="INTEGER" property="download" />
+  </resultMap>
+  <resultMap id="listkey" type="me.yll.thre.model.Videos">
+    <result column="videokeyword" jdbcType="VARCHAR" property="videokeyword" />
+  </resultMap>
+  <select id="getlistkey"  parameterType="map" resultMap="listkey">
+    <![CDATA[
+        select videokeyword from videos GROUP BY videokeyword;
+     ]]>
+  </select>
+  <select id="getlist"  parameterType="map" resultMap="BaseResultMap">
+    <![CDATA[
+        select * from videos WHERE state=0 AND videokeyword=#{videokeyword};
+     ]]>
+  </select>
+</mapper>
