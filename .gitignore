@@ -21,3 +21,13 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+src/main/java/me/yll/thre/dao/
+src/main/java/me/yll/thre/model/
+src/main/java/me/yll/thre/service/
+src/main/java/me/yll/thre/web/ImagesController.java
+src/main/java/me/yll/thre/web/UserController.java
+src/main/java/me/yll/thre/web/VideosController.java
+src/main/resources/mapper/
+src/main/resources/static/images/userimg/
+src/main/resources/static/images/uservideo/
+src/main/resources/static/js/login.js
