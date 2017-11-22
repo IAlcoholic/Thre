@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
-* Created by xubo on 2017/11/19.
+* Created by yll on 2017/11/19.
 */
 @RestController
 @RequestMapping("/videos")
@@ -73,12 +73,21 @@ public void  test(){
     }
 
     @RequestMapping("/list")
-    public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
+    public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "10") Integer size) {
         PageHelper.startPage(page, size);
         List<Videos> list = videosService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }
+
+    @RequestMapping("/finduserid")
+    public Result finduserid(@RequestParam Integer userid) {
+//        Videos videos = new Videos();
+//        videos.setUserid( Integer.parseInt( userid ) );
+        System.out.println( "用户id:"+userid );
+        return ResultGenerator.genSuccessResult(videosService.mylist( userid ));
+    }
+
     /**
      * 根据关键字查询首页视频
      * @param page

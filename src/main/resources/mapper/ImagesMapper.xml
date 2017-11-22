@@ -28,4 +28,9 @@
         select * from images WHERE state=0 AND imagekeyword=#{imagekeyword};
      ]]>
   </select>
+  <select id="mylist"  parameterType="map" resultMap="BaseResultMap">
+    <![CDATA[
+        select * from images WHERE  userid=#{userid};
+     ]]>
+  </select>
 </mapper>

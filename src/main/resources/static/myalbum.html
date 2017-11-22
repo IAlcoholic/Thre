@@ -169,119 +169,20 @@
 		
 <section id="fh5co-work" data-section="work" class="animated">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate fadeInUp animated">我的相册</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext to-animate fadeInUp animated">
-							<input class="btn btn-primary btn-lg" value="旅游" type="button">
-							<input class="btn btn-primary btn-lg" value="爱情" type="button">
-							<input class="btn btn-primary btn-lg" value="旅游" type="button">
-							<input class="btn btn-primary btn-lg" value="爱情" type="button">
-							<input class="btn btn-primary btn-lg" value="旅游" type="button">
-							<input class="btn btn-primary btn-lg" value="爱情" type="button">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-sm">
+			<div class="row" id="myalbum">
 				<div class="col-md-4 col-sm-6 col-xxs-12">
 					<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
 						<img src="images/work_1.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 1</h2>
-						<span>Branding</span>
-						</div>
 					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_2.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_2.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 2</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="clearfix visible-sm-block"></div>
-
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_3.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_3.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 3</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_4.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_4.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 4</h2>
-						<span>UI/UX</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="clearfix visible-sm-block"></div>
-
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_5.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_5.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 1</h2>
-						<span>Photography</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_6.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_6.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 2</h2>
-						<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="clearfix visible-sm-block"></div>
-
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_7.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_7.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 3</h2>
-						<span>Web</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_8.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_8.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 4</h2>
-						<span>Sketch</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="clearfix visible-sm-block"></div>
-
-				<div class="col-md-4 col-sm-6 col-xxs-12">
-					<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate fadeInUp animated">
-						<img src="images/work_1.jpg" alt="Image" class="img-responsive">
-						<div class="fh5co-text">
-						<h2>Project 2</h2>
-						<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center to-animate fadeInUp animated">
-					<p><a href="http://plmd.me/" target="_blank">查看更多</a></p>
+					<span>Branding</span>
+					<span type="button" class="dropdown-toggle pull-right"
+						  data-toggle="dropdown" onclick="setid('1')">
+										类型 <span class="caret"></span>
+									</span>
+					<ul class="dropdown-menu pull-right" role="menu" style="background-color:transparent;">
+						<li><a href="#" onclick="update(this.value)">公开</a></li>>
+						<li><a href="#"  onclick="update(this.value)">私有</a></li>>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -358,7 +259,7 @@
 
 	<script src="js/jquery.style.switcher.js"></script>
 	<script>
-		$(function(){
+
 			$('#colour-variations ul').styleSwitcher({
 				defaultThemeId: 'theme-switch',
 				hasPreview: false,
@@ -370,7 +271,39 @@
 			$('.option-toggle').click(function() {
 				$('#colour-variations').toggleClass('sleep');
 			});
-		});
+			
+			var obj=JSON.parse(localStorage.getItem("thre_user"));
+
+			$.ajax({
+				url: '/images/finduserid',
+				type: 'POST',
+				data: {userid: obj.userid},
+			})
+			.done(function(data) {
+				console.log("success");
+				var html = "";
+				for (var i = 0; i < data.data.length; i++) {
+				html +="\t\t\t\t<div class=\"col-md-4 col-sm-6 col-xxs-12\">\n" +
+                    "\t\t\t\t\t<a href=\"images/work_1.jpg\" class=\"fh5co-project-item image-popup to-animate fadeInUp animated\">\n" +
+                    "\t\t\t\t\t\t<img src=\"images/userimg/"+data.data[i].imagename+"\" alt=\"Image\" class=\"img-responsive\">\n" +
+                    "\t\t\t\t\t</a>\n" +
+                    "\t\t\t\t\t<span>"+data.data[i].imagename+"</span>\n" +
+                    "\t\t\t\t\t<span type=\"button\" class=\"dropdown-toggle pull-right\"\n" +
+                    "\t\t\t\t\t\t  data-toggle=\"dropdown\" onclick=\"setid('"+data.data[i].id+"')\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t类型 <span class=\"caret\"></span>\n" +
+                    "\t\t\t\t\t\t\t\t\t</span>\n" +
+                    "\t\t\t\t\t<ul class=\"dropdown-menu pull-right\" role=\"menu\" style=\"background-color:transparent;\">\n" +
+                    "\t\t\t\t\t\t<li><a href=\"#\" onclick=\"update(this.value)\">公开</a></li>>\n" +
+                    "\t\t\t\t\t\t<li><a href=\"#\"  onclick=\"update(this.value)\">私有</a></li>>\n" +
+                    "\t\t\t\t\t</ul>\n" +
+                    "\t\t\t\t</div>";
+				}
+
+
+                $('#myalbum').html(html);
+			})
+
+			
 	</script>
 	<script src="js/main.js"></script>
 

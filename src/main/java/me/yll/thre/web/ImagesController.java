@@ -2,6 +2,7 @@ package me.yll.thre.web;
 import me.yll.thre.core.Result;
 import me.yll.thre.core.ResultGenerator;
 import me.yll.thre.model.Images;
+import me.yll.thre.model.Videos;
 import me.yll.thre.service.ImagesService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
-* Created by xubo on 2017/11/19.
+* Created by yll on 2017/11/19.
 */
 @RestController
 @RequestMapping("/images")
@@ -73,6 +74,12 @@ public class ImagesController {
         List<Images> list = imagesService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
+    }
+
+    @RequestMapping("/finduserid")
+    public Result finduserid(@RequestParam Integer userid) {
+        System.out.println( "用户id:"+userid );
+        return ResultGenerator.genSuccessResult(imagesService.mylist( userid ));
     }
 
     /**

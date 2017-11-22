@@ -7,9 +7,10 @@ import java.util.List;
 
 
 /**
- * Created by xubo on 2017/11/19.
+ * Created by yll on 2017/11/19.
  */
 public interface VideosService extends Service<Videos> {
     List<Videos> getkeylist();//获取分组
     List<Videos> getlist(String videokeyword);
+    List<Videos> mylist(Integer userid);
 }

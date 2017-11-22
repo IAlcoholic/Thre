@@ -13,7 +13,7 @@ import java.util.List;
 
 
 /**
- * Created by xubo on 2017/11/19.
+ * Created by yll on 2017/11/19.
  */
 @Service
 @Transactional
@@ -31,4 +31,11 @@ public class VideosServiceImpl extends AbstractService<Videos> implements Videos
         System.out.println( "查询字段"+videokeyword );
         return videosMapper.getlist(videokeyword);
     }
+
+    @Override
+    public List<Videos> mylist(Integer userid) {
+        return videosMapper.mylist( userid );
+    }
+
+
 }

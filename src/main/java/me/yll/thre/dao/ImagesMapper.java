@@ -8,4 +8,6 @@ import java.util.List;
 public interface ImagesMapper extends Mapper<Images> {
     List<Images> getlistkey();
     List<Images> getlist(String imagekeyword);
+    List<Images> mylist(Integer userid);
+
 }

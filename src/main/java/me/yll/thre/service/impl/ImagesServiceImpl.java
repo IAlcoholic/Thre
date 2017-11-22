@@ -12,7 +12,7 @@ import java.util.List;
 
 
 /**
- * Created by xubo on 2017/11/19.
+ * Created by yll on 2017/11/19.
  */
 @Service
 @Transactional
@@ -31,4 +31,11 @@ public class ImagesServiceImpl extends AbstractService<Images> implements Images
         System.out.println( "查询字段"+imagekeyword );
         return imagesMapper.getlist(imagekeyword);
     }
+
+    @Override
+    public List<Images> mylist(Integer userid) {
+        return imagesMapper.mylist( userid );
+    }
+
+
 }

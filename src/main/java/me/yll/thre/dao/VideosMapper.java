@@ -9,4 +9,5 @@ import java.util.List;
 public interface VideosMapper extends Mapper<Videos> {
     List<Videos> getlistkey();
     List<Videos> getlist(String videokeyword);
+    List<Videos> mylist(Integer userid);
 }

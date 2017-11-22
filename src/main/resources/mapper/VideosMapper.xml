@@ -28,4 +28,10 @@
         select * from videos WHERE state=0 AND videokeyword=#{videokeyword};
      ]]>
   </select>
+  <select id="mylist"  parameterType="map" resultMap="BaseResultMap">
+    <![CDATA[
+        select * from videos WHERE userid=#{userid};
+     ]]>
+  </select>
+
 </mapper>
